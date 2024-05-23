@@ -6,15 +6,15 @@ twist_mux:
   - name: joy
     priority: 12
     timeout: 0.5
-    topic: joy_teleop/cmd_vel_inverted
+    topic: joy_teleop/cmd_vel
   - name: oculus
     priority: 9
     timeout: 0.5
-    topic: oculus_teleop/cmd_vel_inverted
+    topic: oculus_teleop/cmd_vel
   - name: kb
     priority: 8
     timeout: 0.5
-    topic: kb_teleop/cmd_vel_inverted
+    topic: kb_teleop/cmd_vel
   - name: interactive_marker
     priority: 7
     timeout: 0.5
@@ -22,11 +22,11 @@ twist_mux:
   - name: external
     priority: 1
     timeout: 0.5
-    topic: cmd_vel_inverted
+    topic: cmd_vel
  
 
 ekf_localization:
-    base_link_frame: base_link_rotated
+    base_link_frame: base_link
     imu0_config: [false, false, false,
                   false, false, false,
                   false, false, false,
@@ -155,7 +155,7 @@ move_base:
     publish_frequency: 3.0
     raytrace_range: 6.0
     resolution: 0.05
-    robot_base_frame: base_link_rotated
+    robot_base_frame: base_link
     robot_radius: 0.46
     rolling_window: false
     static:
@@ -202,7 +202,7 @@ move_base:
     publish_frequency: 3.0
     raytrace_range: 6.0
     resolution: 0.04
-    robot_base_frame: base_link_rotated
+    robot_base_frame: base_link
     robot_radius: 0.46
     rolling_window: true
     static:
@@ -223,8 +223,8 @@ move_base:
   restore_defaults: false
   shutdown_costmaps: false
 slam_gmapping:
-  base_frame: base_link_rotated
+  base_frame: base_link
 twist_marker_server:
-    link_name: base_link_rotated
+    link_name: base_link
 
 
